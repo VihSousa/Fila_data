@@ -1,0 +1,28 @@
+# 📈 Análise de Desempenho Estudantil com Filas em Java
+
+![Java](https://img.shields.io/badge/Java-17-blue)
+
+**Objetivo**: Implementar uma fila eficiente para processar 11.001 registros de estudantes, analisando operações básicas (inserção, remoção e busca) com medição de desempenho.
+
+## 🧠 Contexto
+Projeto acadêmico para comparar eficiência de estruturas de dados no processamento de grandes volumes de informação.
+
+## 🛠️ Tecnologias
+| Ferramenta | Descrição              |
+|------------|------------------------|
+| Java 17    | Linguagem principal    |
+| Queue      | Estrutura implementada |
+| CSV        | Dataset de estudantes  |
+
+## 🗂️ Estrutura do Código
+``` Java
+├── src/
+│   ├── Main.java          # Demonstração das operações
+│   ├── Queue.java         # Lógica da fila circular
+│   └── Student.java       # Modelo de dados
+├── data/                  # Armazena o dataset localmente
+└── README.md              # Documentação
+```
+
+📊 Dataset
+Fonte: [Dados acadêmicos simulados](https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-performance)

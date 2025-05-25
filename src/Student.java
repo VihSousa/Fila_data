@@ -5,7 +5,7 @@ public class Student {
     
     private String studentId;
     private int age;
-    private String gender;
+    private String gender; // "Male", "Female", "Other"
     private double studyHoursPerDay;
     private double socialMediaHours;
     private double netflixHours;

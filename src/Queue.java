@@ -1,18 +1,18 @@
 import javax.swing.JOptionPane;
 
 // METODOS DA FILA
-//TROCA DE STRING POR STUDENT, PARA ACEITAR DADOS DO DATASET
 
-public class Queue {
+public class Queue<T> { //Classe genêrica
     private int maxSize;
-    private Student[] queueArray; 
+    private T[] queueArray; 
     private int front;
     private int rear;
     private int nItems;
 
+    @SuppressWarnings("unchecked") // Tira avisos
     public Queue(int s) {
         maxSize = s;
-        queueArray = new Student[maxSize];  // ARMAZENA DADOS DE STUDENT.java
+        queueArray = (T[]) new Object[maxSize]; 
         front = 0;
         rear = -1;
         nItems = 0;
@@ -29,7 +29,7 @@ public class Queue {
 
 //INSERINDO VALOR NA FILA
 
-    public void insert(Student value) {  
+    public void insert(T value) {  
         if (isFull()) {
             JOptionPane.showMessageDialog(null, "A fila está cheia!");
             return;
@@ -41,12 +41,12 @@ public class Queue {
 
 //REMOVENDO VALOR DA FILA
 
-    public Student remove() {  
+    public T remove() {  
         if (isEmpty()) {
             JOptionPane.showMessageDialog(null, "A fila está vazia!");
             return null;
         }
-        Student temp = queueArray[front];
+        T temp = queueArray[front];
         front = (front + 1) % maxSize;
         nItems--;
         return temp;
@@ -69,7 +69,7 @@ public class Queue {
 
 //EXIBIR O PRÓXIMO DA FILA
 
-    public Student peek() {
+    public T peek() {
         if (isEmpty()) {
             JOptionPane.showMessageDialog(null, "A fila está vazia!");
             return null;
@@ -77,3 +77,13 @@ public class Queue {
         return queueArray[front];
     }
 }
+
+/* Estudar métodos generiocos - Funcionam com qualquer tipo de dados
+
+Java não permite new T[], por isso usamos (T[]) new Object[]
+
+Generics não funcionam com primitivos (int, double). Use as classes wrappers (Integer, Double).
+
+O método display() assume que T tem um toString() implementado (toda classe em Java herda isso).
+
+*/
