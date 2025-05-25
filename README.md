@@ -1,7 +1,10 @@
 # 📈 Análise de Desempenho Estudantil com Filas em Java
 
 ![Java](https://img.shields.io/badge/Java-17-blue)
+<<<<<<< HEAD
 ![GitHub](https://img.shields.io/badge/Status-Concluído-brightgreen)
+=======
+>>>>>>> 94080c3 (Update: Classe genêrica)
 
 **Objetivo**: Implementar uma fila eficiente para processar 11.001 registros de estudantes, analisando operações básicas (inserção, remoção e busca) com medição de desempenho.
 
