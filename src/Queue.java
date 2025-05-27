@@ -9,6 +9,10 @@ public class Queue<T> { //Classe genêrica
     private int rear;
     private int nItems;
 
+    public int size() {
+    return nItems;
+}
+
     @SuppressWarnings("unchecked") // Tira avisos
     public Queue(int s) {
         maxSize = s;

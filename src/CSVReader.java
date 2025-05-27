@@ -11,7 +11,7 @@ public class CSVReader {
 
         while ((line = br.readLine()) != null) {
             String[] data = line.split(",");
-            // Converte cada linha em um objeto Student
+            // Converte cada linha em um objeto de Student
             Student student = new Student(
                 data[0],                          // student_id (String)
                 Integer.parseInt(data[1]),        // age (int)

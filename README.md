@@ -1,10 +1,7 @@
 # 📈 Análise de Desempenho Estudantil com Filas em Java
 
 ![Java](https://img.shields.io/badge/Java-17-blue)
-<<<<<<< HEAD
 ![GitHub](https://img.shields.io/badge/Status-Concluído-brightgreen)
-=======
->>>>>>> 94080c3 (Update: Classe genêrica)
 
 **Objetivo**: Implementar uma fila eficiente para processar 11.001 registros de estudantes, analisando operações básicas (inserção, remoção e busca) com medição de desempenho.
 
@@ -20,13 +17,41 @@ Projeto acadêmico para comparar eficiência de estruturas de dados no processam
 
 ## 🗂️ Estrutura do Código
 ``` Java
-├── src/
-│   ├── Main.java          # Demonstração das operações
-│   ├── Queue.java         # Lógica da fila circular
-│   └── Student.java       # Modelo de dados
-├── data/                  # Armazena o dataset localmente
-└── README.md              # Documentação
+projeto/
+├── bin/                # Onde os arquivos compilados .class serão gerados
+├── data/               # Nomeie o dataset como Student_Data.csv
+├── src/                # Contém os arquivos .java
+│   ├── Main.java
+│   ├── Queue.java
+│   ├── Student.java
+│   └── resultados/
+│       └── StatsResult.java
+├── README.md           # Documentação
 ```
+
+## 🔨 Compilar o projeto
+Abra o terminal na raiz do projeto e rode:
+
+```bash
+javac -d bin src/**/*.java
+```
+Isso compila todos os .java da pasta src/ e salva os .class organizados dentro de bin/.
+
+🚀 Executar o projeto
+
+Se a sua classe Main.java não estiver em um pacote (sem package no topo), execute:
+
+```bash
+java -cp bin Main
+```
+
+
+Se estiver dentro de um pacote, como package resultados;, use:
+
+```bash
+java -cp bin resultados.
+```
+
 
 📊 Dataset
 Fonte: [Dados acadêmicos simulados](https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-performance)
