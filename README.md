@@ -1,10 +1,7 @@
 # 📈 Análise de Desempenho Estudantil com Filas em Java
 
 ![Java](https://img.shields.io/badge/Java-17-blue)
-<<<<<<< HEAD
 ![GitHub](https://img.shields.io/badge/Status-Concluído-brightgreen)
-=======
->>>>>>> 94080c3b39ad895960d77e1d45481b5be10134e4
 
 **Objetivo**: Implementar uma fila eficiente para processar 11.001 registros de estudantes, analisando operações básicas (inserção, remoção e busca) com medição de desempenho.
 
@@ -20,7 +17,6 @@ Projeto acadêmico para comparar eficiência de estruturas de dados no processam
 
 ## 🗂️ Estrutura do Código
 ``` Java
-<<<<<<< HEAD
 projeto/
 ├── bin/                # Onde os arquivos compilados .class serão gerados
 ├── data/               # Nomeie o dataset como Student_Data.csv
@@ -57,15 +53,5 @@ java -cp bin resultados.
 ```
 
 
-=======
-├── src/
-│   ├── Main.java          # Demonstração das operações
-│   ├── Queue.java         # Lógica da fila circular
-│   └── Student.java       # Modelo de dados
-├── data/                  # Armazena o dataset localmente
-└── README.md              # Documentação
-```
-
->>>>>>> 94080c3b39ad895960d77e1d45481b5be10134e4
 📊 Dataset
 Fonte: [Dados acadêmicos simulados](https://www.kaggle.com/datasets/jayaantanaath/student-habits-vs-academic-performance)
