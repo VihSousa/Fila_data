@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+
 public class CSVReader {
     public static Queue<Student> loadStudents(String filePath) throws IOException { //Fazer o pré processamento aqui
         Queue<Student> queue = new Queue<>(11001); // Tamanho do dataset
@@ -19,7 +20,7 @@ public class CSVReader {
                 Double.parseDouble(data[3]),      // study_hours_per_day (double)
                 Double.parseDouble(data[4]),      // social_media_hours (double)
                 Double.parseDouble(data[5]),      // netflix_hours (double)
-                data[6].equalsIgnoreCase("Yes"),  // part_time_job (boolean: "Yes" -> true, "No" -> false)
+                data[6].equalsIgnoreCase("Yes"),  // part_time_job (boolean)
                 Double.parseDouble(data[7]),      // attendance_percentage (double)
                 Double.parseDouble(data[8]),      // sleep_hours (double)
                 data[9],                          // diet_quality (String: "Poor", "Fair", "Good")
@@ -30,7 +31,7 @@ public class CSVReader {
                 data[14].equalsIgnoreCase("Yes"), // extracurricular_participation (boolean)
                 Double.parseDouble(data[15])      // exam_score (double)
             );
-            queue.insert(student); // Adiciona na fila
+            queue.insert(student);
         }
         br.close();
         return queue;

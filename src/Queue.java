@@ -1,7 +1,5 @@
 import javax.swing.JOptionPane;
 
-// METODOS DA FILA
-
 public class Queue<T> { //Classe genêrica
     private int maxSize;
     private T[] queueArray; 
@@ -13,7 +11,7 @@ public class Queue<T> { //Classe genêrica
     return nItems;
 }
 
-    @SuppressWarnings("unchecked") // Tira avisos
+    @SuppressWarnings("unchecked") // Remove avisos
     public Queue(int s) {
         maxSize = s;
         queueArray = (T[]) new Object[maxSize]; 
@@ -31,7 +29,7 @@ public class Queue<T> { //Classe genêrica
     }
 
 
-//INSERINDO VALOR NA FILA
+//INSERÇÃO
 
     public void insert(T value) {  
         if (isFull()) {
@@ -43,7 +41,7 @@ public class Queue<T> { //Classe genêrica
         nItems++;
     }
 
-//REMOVENDO VALOR DA FILA
+//REMOÇÃO
 
     public T remove() {  
         if (isEmpty()) {
@@ -56,7 +54,7 @@ public class Queue<T> { //Classe genêrica
         return temp;
     }
 
-//EXIBINDO A FILA
+//EXIBIÇÃO
 
     public void display() {
         if (isEmpty()) {
@@ -71,7 +69,7 @@ public class Queue<T> { //Classe genêrica
         JOptionPane.showMessageDialog(null, sb.toString());
     }
 
-//EXIBIR O PRÓXIMO DA FILA
+//EXIBIÇÃO DO PRÓXIMO VALOR
 
     public T peek() {
         if (isEmpty()) {
@@ -81,13 +79,3 @@ public class Queue<T> { //Classe genêrica
         return queueArray[front];
     }
 }
-
-/* Estudar métodos generiocos - Funcionam com qualquer tipo de dados
-
-Java não permite new T[], por isso usamos (T[]) new Object[]
-
-Generics não funcionam com primitivos (int, double). Use as classes wrappers (Integer, Double).
-
-O método display() assume que T tem um toString() implementado (toda classe em Java herda isso).
-
-*/
